@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.inicio h1 {
+    font-size: 65px;
+    margin: 20px 0;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pequeno {
+    font-size: 20px;
+}
+
+.subtitulo {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4f81;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.mensaje {
+    background: rgba(255,255,255,0.12);
+}
+
+.mensaje h2,
+.frases h2,
+.final h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.mensaje p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 10px;
+}
+
+.especial {
+    font-size: 25px !important;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 25px;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    width: 280px;
+    min-height: 220px;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.tarjeta span {
+    font-size: 45px;
+}
+
+.tarjeta p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.final {
+    background: rgba(0,0,0,0.08);
+}
+
+.final h1 {
+    font-size: 50px;
+    margin: 25px;
+}
+
+.final p {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.firma {
+    margin-top: 30px;
+    font-style: italic;
+}
+
+
+/* Corazones */
+
+.corazon {
+    position: fixed;
+    bottom: -30px;
+    color: #ff1744;
+    font-size: 25px;
+    animation: subir 6s linear forwards;
+    z-index: 1;
+    text-shadow:
+        0 0 5px #ff1744,
+        0 0 10px #ff1744,
+        0 0 20px rgba(255, 23, 68, 0.7);
+    pointer-events: none;
+}
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg) scale(1.3);
+        opacity: 0;
+    }
+
+}
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 600px) {
+
+    .inicio h1 {
+        font-size: 42px;
+    }
+
+    .mensaje h2,
+    .frases h2,
+    .final h2 {
+        font-size: 30px;
+    }
+
+    .final h1 {
+        font-size: 38px;
+    }
+
+    .subtitulo {
+        font-size: 17px;
+    }
+    css
+/* =====================================
+   GALERÍA
+===================================== */
+
+.galeria {
+    min-height: 100vh;
+    padding: 80px 20px;
+    
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.texto-galeria {
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+
+/* =====================================
+   CONTENEDOR
+===================================== */
+
+.galeria-corazones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================
+   CADA FOTO
+===================================== */
+
+.foto-corazon {
+    text-align: center;
+}
+
+
+/* =====================================
+   MARCO DE CORAZÓN
+===================================== */
+
+.corazon-marco {
+
+    width: 260px;
+    height: 240px;
+
+    position: relative;
+
+    /* FORMA DEL CORAZÓN */
+    clip-path: polygon(
+        50% 100%,
+        42% 91%,
+        30% 80%,
+        18% 68%,
+        8% 55%,
+        3% 42%,
+        3% 30%,
+        7% 20%,
+        15% 12%,
+        25% 8%,
+        35% 9%,
+        43% 14%,
+        50% 24%,
+        57% 14%,
+        65% 9%,
+        75% 8%,
+        85% 12%,
+        93% 20%,
+        97% 30%,
+        97% 42%,
+        92% 55%,
+        82% 68%,
+        70% 80%,
+        58% 91%
+    );
+
+    /* MARCO */
+    background: white;
+
+    padding: 8px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,0.8))
+        drop-shadow(0 0 15px rgba(255,0,80,0.7));
+
+    transition: 0.4s ease;
+}
+
+
+/* =====================================
+   FOTO DENTRO DEL CORAZÓN
+===================================== */
+
+.corazon-marco img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    /* LA FOTO TAMBIÉN TIENE FORMA DE CORAZÓN */
+    clip-path: inherit;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* =====================================
+   EFECTO AL PASAR EL MOUSE
+===================================== */
+
+.corazon-marco:hover {
+
+    transform: scale(1.1);
+
+    filter:
+        drop-shadow(0 0 10px white)
+        drop-shadow(0 0 25px #ff1744)
+        drop-shadow(0 0 40px #ff1744);
+}
+
+.corazon-marco:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =====================================
+   TEXTO
+===================================== */
+
+.foto-corazon p {
+
+    margin-top: 18px;
+
+    font-family: cursive;
+
+    font-size: 19px;
+
+    color: white;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    .galeria h2 {
+        font-size: 34px;
+    }
+
+    .galeria-corazones {
+        gap: 50px;
+    }
+
+    .corazon-marco {
+        width: 230px;
+        height: 215px;
+    }
+
+}
+
+}
